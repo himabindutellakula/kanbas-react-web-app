@@ -1,0 +1,73 @@
+<html>
+<head></head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td valign="top">
+                    <ul>
+                        <li><a href="/Kanbas/Account/Navigation/index.html"> Account</a></li>
+                        <li><a href="/Kanbas/Dashboard/screen.html">Dashboard</a></li>
+                        <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
+                        <li><a href="/Kanbas/Calendar/index.html">Calendar</a></li>
+                        <li><a href="/Kanbas/Inbox/index.html">Inbox</a></li>
+                    </ul>
+                </td>
+                <td valign="top">
+                    <ul>
+                        <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+                        <li><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
+                        <li><a href="/Kanbas/Courses/Piazza/index.html">Piazza</a></li>
+                        <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                        <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
+                    </ul>
+                </td>
+                <td valign="top">
+                    <form action="/Kanbas/Courses/Assignments/screen.html">
+                        <select>
+                            <option>Speed Grader</option>
+                        </select>
+                        <br />
+                        <h2>Assignment Name</h2>
+                        <input value="A1 - HTML" />
+                        <br />
+                        <textarea>This is assignment description</textarea>
+                        <br />
+                        <br />
+                        <label for="points"> Points</label><br />
+                        <input id="points" value="100" />
+                        <br />
+                        <br />
+                        <select>
+                            <option>Assignment</option>
+                            <option>Quiz</option>
+                            <option>Exam</option>
+                            <option>Project</option>
+                        </select>
+                        <br />
+                        <br />
+                        <label>Online Entry options</label><br />
+                        <label><input type="checkbox" name="online-entry-options" />Text Entry</label><br />
+                        <label><input type="checkbox" name="online-entry-options" />Website URL</label><br />
+                        <label><input type="checkbox" name="online-entry-options" />Media Recording</label><br />
+                        <label><input type="checkbox" name="online-entry-options" />Student Annotations</label><br />
+                        <br />
+                        <br />
+                        <label>Due Date</label><br />
+                        <input type="date" value="2020-09-01" /><br />
+                        <br />
+                        <br />
+                        <label>Available From</label><br />
+                        <input type="date" value="2020-09-01" /><br />
+                        <br />
+                        <br />
+                        <button>Cancel</button>
+                        <button>Save</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
