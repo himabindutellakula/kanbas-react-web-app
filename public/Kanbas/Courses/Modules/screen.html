@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
@@ -16,15 +17,15 @@
 </head>
 
 <body>
-    <div class="d-block d-md-none short-navbar justify-content-center">
-        <p class="d-inline-flex gap-1 justify-content-center">
-            <a class="btn btn-primary a-button" data-bs-toggle="collapse" href="#collapseExample1" role="button"
+    <div class="d-block d-md-none short-navbar">
+        <p class="d-inline-flex gap-1">
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample1" role="button"
                 aria-expanded="false" aria-controls="collapseExample">
                 <i class="fa fa-bars"></i>
             </a>
-            <span class="ms-auto">CS5610.35159.202430</span>
-            <a class="btn btn-primary m1-auto a-button float-right" data-bs-toggle="collapse" href="#collapseExample2"
-                role="button" aria-expanded="false" aria-controls="collapseExample">
+            <span class="ms-auto">CS5610.35159.202430-Web Development Course</span>
+            <a class="btn btn-primary m1-auto" data-bs-toggle="collapse" href="#collapseExample2" role="button"
+                aria-expanded="false" aria-controls="collapseExample">
                 <i class="fa fa-angle-down" aria-hidden="true"></i>
             </a>
         </p>
@@ -52,8 +53,8 @@
         <div class="collapse" id="collapseExample2">
             <div class="card card-body">
                 <ul class="wd-navigation">
-                    <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
-                    <li><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
+                    <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+                    <li class="wd-active"><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
                     <li><a href="#">Piazza</a></li>
                     <li><a href="#">Zoom Meetings</a></li>
                     <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
@@ -72,14 +73,13 @@
                     <li><a href="/Kanbas/Courses/Settings/screen.html">Settings</a></li>
                 </ul>
             </div>
-
         </div>
     </div>
 
     <!-- Implement links to Kanbas and Course Navigation -->
     <div class="container-fluid application-page">
         <div class="row custom-row">
-            <div class="col-md-6 d-none d-md-block wd-kanbas-nav custom-col-6">
+            <div class="col-1 col-md-6 d-none d-md-block wd-kanbas-nav custom-col-6">
                 <ul class="wd-kanbas-navigation">
                     <li><a href="http://northeastern.edu"><img class="wd-kanbas-navigation-img"
                                 src="/images/neulogo.png" alt="Logo"></a></li>
@@ -98,28 +98,20 @@
                     <li><a href="#"><i class="fa fa-question-circle"></i><br />Help</a></li>
                 </ul>
             </div>
-            <div class="col-md-6 custom-col-6-2">
-                <div class="row d-none d-md-block ">
+            <div class="col-11 col-md-6 custom-col-6-2">
+                <div class="row">
                     <!-- Top Right Content -->
-                    <!-- <div class="col-12 cust-col-12-a">
-                        <span><i class="fa fa-bars" aria-hidden="true"></i>CS5610.35159.202430</span> > Grades
-                    </div> -->
-                    <nav aria-label="breadcrumb">
-
-                        <ol class="breadcrumb">
-                            <i class="fa fa-bars" aria-hidden="true"></i>
-                            <li class="breadcrumb-item"><a href="#">CS5610.35159.202430</a></li>
-                            <li class="breadcrumb-item active"><a href="#">Home</a></li>
-                        </ol>
-                    </nav>
+                    <div class="col-12 cust-col-12-a">
+                        <span><i class="fa fa-bars" aria-hidden="true"></i>CS5610.35159.202430</span> > Modules
+                    </div>
                     <hr />
                 </div>
                 <div class="row cust-subrow flex-fill">
                     <!-- Left Column -->
-                    <div class="col-md-3 d-none d-md-block wd-course-nav cust-subcol-left" style="width: 200px">
+                    <div class="col-3 col-md-3 d-none d-md-block wd-course-nav cust-subcol-left" >
                         <ul class="wd-navigation">
-                            <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
-                            <li><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
+                            <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+                            <li class="wd-active"><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
                             <li><a href="#">Piazza</a></li>
                             <li><a href="#">Zoom Meetings</a></li>
                             <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
@@ -139,9 +131,8 @@
                         </ul>
                     </div>
                     <!-- Right Column -->
-                    <div class="col-md-6 wd-modules-container flex-fill cust-subcol-right">
+                    <div class="col-9 col-md-6 wd-modules-container flex-fill cust-subcol-right">
                         <ul class="list-group wd-modules">
-                            <!-- Copy Course Home here -->
                             <div class="wd-modules-buttons row justify-content-end">
                                 <div class="col-auto">
                                     <button type="button" class="btn btn-secondary py-1 px-2">Collapse All</button>
@@ -155,10 +146,10 @@
                                     </select>
                                 </div>
                                 <div class="col-auto">
-                                    <button type="button" class="btn btn-danger py-1 px-2">+ Module</button>
+                                    <button type="button" class="btn btn-danger py-1 px-2" >+ Module</button>
                                 </div>
                             </div>
-
+                    
                             <ul class="list-group wd-modules">
                                 <li class="list-group-item">
                                     <div>
@@ -339,53 +330,9 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <!-- Copy Course Home here -->
                         </ul>
                     </div>
 
-
-                    <div class="col-md-3 wd-modules-container cust-subcol-right flex-grow-0 me-2 d-none d-lg-block wd-publish"
-                        style="width: 290px">
-                        <h5>Course Status</h5>
-                        <div>
-                            <button type="button" class="unpublished"><i class="fa fa-ban"
-                                    aria-hidden="true"></i>Unpublish</button>
-                            <button type="button" class="published"><i class="fa fa-check-circle"
-                                    aria-hidden="true"></i>Published</button>
-                        </div>
-                        <ul>
-                            <li><a href=""><button type="button"><i class="fa fa-upload" aria-hidden="true"></i>Import
-                                        Existing Content</button></a></li>
-                            <li><a href=""><button type="button"><i class="fa fa-cloud-upload"
-                                            aria-hidden="true"></i>Import From Commons</button></a></li>
-                            <li><a href=""><button type="button"><i class="fa fa-bullseye" aria-hidden="true"></i>Choose
-                                        Home Page</button></a></li>
-                            <li><a href=""><button type="button"><i class="fa fa-bar-chart" aria-hidden="true"></i>View
-                                        Course Stream</button></a></li>
-                            <li><a href=""><button type="button"><i class="fa fa-bullhorn" aria-hidden="true"></i>New
-                                        Announcement</button></a></li>
-                            <li><a href=""><button type="button"><i class="fa fa-bar-chart" aria-hidden="true"></i>New
-                                        Analytics</button></a></li>
-                            <li><a href=""><button type="button"><i class="fa fa-bell-o" aria-hidden="true"></i>View
-                                        Course Notifications</button></a></li>
-                        </ul>
-                        <div class="upcoming">
-                            <span class="coming-up">Coming Up</span>
-                            <span class="view-calendar"><i class="fa fa-calendar" aria-hidden="true"></i><a
-                                    href="#">View Calendar</a></span>
-                        </div>
-                        <hr>
-                        <ul>
-                            <li><i class="fa fa-calendar" aria-hidden="true"></i><span><a href="#">Lecture
-                                    </a><br />CS4550.12631.202410<br /> Sep 7 at 11:45am</span></li>
-                            <li><i class="fa fa-calendar" aria-hidden="true"></i><span><a href="#">Lecture
-                                    </a><br />CS4550.12631.202410<br /> Sep 11 at 11:45am</span></li>
-                            <li><i class="fa fa-calendar" aria-hidden="true"></i><span><a href="#">Lecture
-                                    </a><br />CS5610.06 SP23<br /> Sep 11 at 6pm</span></li>
-
-                        </ul>
-
-                    </div>
                 </div>
             </div>
         </div>

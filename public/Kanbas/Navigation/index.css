@@ -4,11 +4,12 @@
     padding: 0px;
     margin: 0px;
     width: 80px;
+    height: 100%
 }
 
 .wd-kanbas-navigation li {
     padding: 10px;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
     font-size: 0.8em;
     text-align: center;
 }
@@ -32,6 +33,11 @@
     margin-bottom: 5px;
 }
 
-ul.wd-kanbas-navigation li a .fa-user {
+.wd-kanbas-navigation li:nth-child(2) a .fa-user-circle-o {
     color: white;
+}
+
+.wd-kanbas-navigation li img {
+    width: 60px; /* Adjust the width as needed */
+    height: 60px; /* Adjust the height as needed */
 }
