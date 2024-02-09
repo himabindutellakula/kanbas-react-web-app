@@ -120,7 +120,8 @@ button.assi-button {
     content: var(--bs-breadcrumb-divider, ">");
 }
 ol.breadcrumb {
-    padding: 15px;
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
 }
 ol.breadcrumb>i {
     color: #b52828;
@@ -132,4 +133,8 @@ ol.breadcrumb>li>a {
     color: #333;
     font-size: 18px;
     font-family: "Segoe UI", sans-serif;
+}
+
+div.col-9.wd-modules-container.flex-fill.cust-subcol-right {
+    padding: 0px 30px 30px 30px;
 }

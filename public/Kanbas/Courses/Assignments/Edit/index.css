@@ -32,6 +32,7 @@ a.btn.btn-secondary{
 }
 ol.breadcrumb {
     padding: 15px;
+    margin: none;
 }
 ol.breadcrumb>i {
     color: #b52828;
@@ -43,4 +44,12 @@ ol.breadcrumb>li>a {
     color: #333;
     font-size: 18px;
     font-family: "Segoe UI", sans-serif;
+}
+
+div.col-9.wd-modules-container.flex-fill.cust-subcol-right {
+    padding: 0px 30px 0px 0px;
+}
+
+.published-text {
+    color: green;
 }
