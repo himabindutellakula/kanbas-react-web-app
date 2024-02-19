@@ -1,0 +1,210 @@
+[
+    {
+        "_id": "M101",
+        "name": "Introduction to React JS",
+        "description": "Basic principles and fundamentals of React JS.",
+        "course": "RS101",
+        "lessons": [
+            {
+                "_id": "L101",
+                "name": "Introduction to Frontend Development",
+                "description": "An overview of frontend development and its importance.",
+                "module": "M101"
+            },
+            {
+                "_id": "L102",
+                "name": "Understanding React Components",
+                "description": "Basic concepts of React components and their usage.",
+                "module": "M101"
+            },
+            {
+                "_id": "L103",
+                "name": "State and Props in React",
+                "description": "Explanation of state and props in React and their role.",
+                "module": "M101"
+            }
+        ]
+    },
+    {
+        "_id": "M102",
+        "name": "IOS Mobile App Development Fundamentals",
+        "description": "Basic principles and fundamentals of IOS mobile app development.",
+        "course": "RS102",
+        "lessons": [
+            {
+                "_id": "L101",
+                "name": "Introduction to IOS Development",
+                "description": "An overview of IOS development and its ecosystem.",
+                "module": "M102"
+            },
+            {
+                "_id": "L102",
+                "name": "Building User Interfaces in IOS",
+                "description": "Creating user interfaces using UIKit in IOS applications.",
+                "module": "M102"
+            },
+            {
+                "_id": "L103",
+                "name": "Working with Swift Programming Language",
+                "description": "Introduction to Swift programming language for IOS development.",
+                "module": "M102"
+            }
+        ]
+    },
+    {
+        "_id": "M103",
+        "name": "Java Programming Fundamentals",
+        "description": "Basic principles and fundamentals of Java programming language.",
+        "course": "RS103",
+        "lessons": [
+            {
+                "_id": "L101",
+                "name": "Introduction to Java",
+                "description": "An overview of Java programming language and its features.",
+                "module": "M103"
+            },
+            {
+                "_id": "L102",
+                "name": "Java Syntax and Control Structures",
+                "description": "Understanding Java syntax and various control structures.",
+                "module": "M103"
+            },
+            {
+                "_id": "L103",
+                "name": "Object-Oriented Programming in Java",
+                "description": "Concepts of object-oriented programming using Java.",
+                "module": "M103"
+            }
+        ]
+    },
+    {
+        "_id": "M104",
+        "name": "Database Management Systems Fundamentals",
+        "description": "Basic principles and fundamentals of Database Management Systems.",
+        "course": "RS104",
+        "lessons": [
+            {
+                "_id": "L101",
+                "name": "Introduction to Databases",
+                "description": "Understanding databases and their importance in modern applications.",
+                "module": "M104"
+            },
+            {
+                "_id": "L102",
+                "name": "Relational Database Management Systems",
+                "description": "Overview of relational database management systems and SQL.",
+                "module": "M104"
+            },
+            {
+                "_id": "L103",
+                "name": "Database Design and Normalization",
+                "description": "Principles of database design and normalization techniques.",
+                "module": "M104"
+            }
+        ]
+    },
+    {
+        "_id": "M105",
+        "name": "Introduction to Cloud Computing",
+        "description": "Basic principles and fundamentals of Cloud Computing.",
+        "course": "RS105",
+        "lessons": [
+            {
+                "_id": "L101",
+                "name": "Overview of Cloud Computing",
+                "description": "Introduction to cloud computing and its key concepts.",
+                "module": "M105"
+            },
+            {
+                "_id": "L102",
+                "name": "Cloud Service Models",
+                "description": "Explanation of various cloud service models like IaaS, PaaS, and SaaS.",
+                "module": "M105"
+            },
+            {
+                "_id": "L103",
+                "name": "Cloud Deployment Models",
+                "description": "Understanding different cloud deployment models like public, private, and hybrid clouds.",
+                "module": "M105"
+            }
+        ]
+    },
+    {
+        "_id": "M106",
+        "name": "Algorithms Fundamentals",
+        "description": "Basic principles and fundamentals of Algorithms.",
+        "course": "RS106",
+        "lessons": [
+            {
+                "_id": "L101",
+                "name": "Introduction to Algorithms",
+                "description": "An overview of algorithms and their importance in computer science.",
+                "module": "M106"
+            },
+            {
+                "_id": "L102",
+                "name": "Algorithm Analysis",
+                "description": "Analyzing algorithm efficiency and time complexity.",
+                "module": "M106"
+            },
+            {
+                "_id": "L103",
+                "name": "Sorting and Searching Algorithms",
+                "description": "Understanding various sorting and searching algorithms.",
+                "module": "M106"
+            }
+        ]
+    },
+    {
+        "_id": "M107",
+        "name": "Programming Design Paradigm",
+        "description": "Exploration of different programming design paradigms.",
+        "course": "RS107",
+        "lessons": [
+            {
+                "_id": "L101",
+                "name": "Imperative Programming",
+                "description": "Understanding imperative programming paradigm.",
+                "module": "M107"
+            },
+            {
+                "_id": "L102",
+                "name": "Functional Programming",
+                "description": "Introduction to functional programming paradigm.",
+                "module": "M107"
+            },
+            {
+                "_id": "L103",
+                "name": "Object-Oriented Programming",
+                "description": "Exploring object-oriented programming paradigm.",
+                "module": "M107"
+            }
+        ]
+    },
+    {
+        "_id": "M108",
+        "name": "Introduction to Artificial Intelligence",
+        "description": "Basic principles and fundamentals of Artificial Intelligence.",
+        "course": "RS108",
+        "lessons": [
+            {
+                "_id": "L101",
+                "name": "Overview of Artificial Intelligence",
+                "description": "Introduction to artificial intelligence and its applications.",
+                "module": "M108"
+            },
+            {
+                "_id": "L102",
+                "name": "Machine Learning Fundamentals",
+                "description": "Basic concepts and algorithms of machine learning.",
+                "module": "M108"
+            },
+            {
+                "_id": "L103",
+                "name": "Deep Learning",
+                "description": "Exploring deep learning techniques and architectures.",
+                "module": "M108"
+            }
+        ]
+    }
+]

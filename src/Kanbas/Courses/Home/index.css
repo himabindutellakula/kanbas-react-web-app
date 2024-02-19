@@ -11,40 +11,6 @@
 }
 
 .wd-modules>li {
-    background-color: lightgray;
-    border: 1px solid gray !important;
-    border-left: none !important;
-}
-
-.wd-modules>li>div {
-    padding: 6px;
-    border-left: 1px solid gray !important;
-}
-
-.wd-modules>li>ul>li {
-    padding: 5px;
-    border-top: 1px solid gray !important;
-    border-left: 2px solid green;
-}
-
-.wd-modules>li {
-    margin-bottom: 20px;
-}
-
-/* The home page CSS */
-.wd-modules,
-.wd-modules * {
-    border-radius: 0%;
-    border: none;
-    margin: 0px;
-    padding: 0px;
-}
-
-.wd-modules {
-    margin: 5px;
-}
-
-.wd-modules>li {
     background-color: #f5f5f5;
     border: 1px solid #c7cdd1 !important;
     border-left: none !important;
@@ -119,7 +85,7 @@
 }
 
 .wd-modules-container {
-    padding: 30px 40px 40px 40px;
+    padding: 36px 48px 48px 48px;
 }
 
 
@@ -166,6 +132,9 @@
     padding: 4px 8px;
 }
 
+.a-button,
+button.unpublished,
+button.published,
 .wd-publish>ul>li>a>button {
     width: 100%;
     background: #f5f5f5;
@@ -244,10 +213,61 @@
     /* Adjust the text color as needed */
 }
 
-.col-auto {
-    padding: 4px;
+.short-navbar {
+    background-color: #333;
 }
 
-div.col-9.col-md-6.wd-modules-container.flex-fill.cust-subcol-right {
+.short-navbar>p>span {
+    font-size: 16px;
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.short-navbar>a>button>i {
+    color: #333;
+}
+
+a.btn.btn-primary.m1-auto.collapsed {
+    align-items: end;
+}
+
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: var(--bs-breadcrumb-divider, ">");
+}
+ol.breadcrumb {
+    padding: 15px;
+}
+ol.breadcrumb>i {
+    color: #b52828;
+    padding: 10px;
+}
+ol.breadcrumb>li>a {
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+button.unpublished{
+    width: 49%;
+}
+button.published{
+    background: #36a33d;
+    width: 49%;
+}
+.wd-publish>ul>li>span>a{
+    color: #b52828;
+    text-decoration: none;
+}
+.short-navbar>p>a.btn-navbar{
+    color: #b52828;
+}
+.a-button{
+    margin: 0px 30px;
+}
+
+.col-9.col-md-6.wd-modules-container.flex-fill.cust-subcol-right {
     padding: 0px 30px 30px 30px;
 }

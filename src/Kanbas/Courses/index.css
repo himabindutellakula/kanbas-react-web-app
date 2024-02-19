@@ -1,0 +1,10 @@
+.custom-top-navbar {
+    padding: 20px;
+}
+
+.custom-breadcrumb {
+    --bs-breadcrumb-divider: ">";
+}
+.custom-top-breadcrumb{
+    color: red;
+}
