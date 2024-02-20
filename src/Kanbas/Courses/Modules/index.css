@@ -251,3 +251,10 @@
 div.col-9.col-md-6.wd-modules-container.flex-fill.cust-subcol-right {
     padding: 0px 30px 30px 30px;
 }
+
+button.unpublished{
+    width: 49%;
+}
+button.module{
+    background: red;
+}
