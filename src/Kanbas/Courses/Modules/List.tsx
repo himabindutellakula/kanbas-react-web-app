@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./index.css";
 import { modules } from "../../Database";
-import { FaEllipsisV, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
+import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaCaretDown, FaLink } from "react-icons/fa";
 import { useParams } from "react-router";
 function ModuleList() {
     const { courseId } = useParams();
@@ -17,6 +17,7 @@ function ModuleList() {
                         onClick={() => setSelectedModule(module)}>
                         <div>
                             <FaEllipsisV className="me-2" />
+                            <FaCaretDown className="me-2" />
                             {module.name}
                             <span className="float-end">
                                 <FaCheckCircle className="text-success" />
@@ -29,6 +30,7 @@ function ModuleList() {
                                 {module.lessons?.map((lesson) => (
                                     <li className="list-group-item">
                                         <FaEllipsisV className="me-2" />
+                                        <FaLink className="me-2" />
                                         {lesson.name}
                                         <span className="float-end">
                                             <FaCheckCircle className="text-success" />

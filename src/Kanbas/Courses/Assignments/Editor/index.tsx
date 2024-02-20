@@ -76,8 +76,7 @@ function AssignmentEditor() {
                     </select>
                     <br />
                     <input type="checkbox" id="count_final_grade" />
-                    <label>Do not count this assignment towards the final
-                        grade</label>
+                    <label style={{ marginLeft: '5px' }}>Do not count this assignment towards the final grade</label>
                 </div>
             </div>
 
@@ -93,21 +92,21 @@ function AssignmentEditor() {
                             <option>Online</option>
                             <option>Offline</option>
                         </select><br />
-                        <label>Online Entry Options</label><br />
+                        <label style={{ marginLeft: '5px' }}>Online Entry Options</label><br />
                         <input type="checkbox" id="options1" />
-                        <label>Text Entry</label>
+                        <label style={{ marginLeft: '5px' }}>Text Entry</label>
                         <br />
                         <input type="checkbox" id="options2" />
-                        <label>Website URL</label>
+                        <label style={{ marginLeft: '5px' }}>Website URL</label>
                         <br />
                         <input type="checkbox" id="options3" />
-                        <label>Media Recordings</label>
+                        <label style={{ marginLeft: '5px' }}>Media Recordings</label>
                         <br />
                         <input type="checkbox" id="options4" />
-                        <label>Student Annotation</label>
+                        <label style={{ marginLeft: '5px' }}>Student Annotation</label>
                         <br />
                         <input type="checkbox" id="options5" />
-                        <label>File Uploads</label>
+                        <label style={{ marginLeft: '5px' }}>File Uploads</label>
 
                         <br />
                     </div>
@@ -153,7 +152,7 @@ function AssignmentEditor() {
             <div className="d-flex justify-content-between">
                 <div>
                     <input type="checkbox" id="notify_users" />
-                    <label>Notify users that this content has changed</label>
+                    <label style={{ marginLeft: '5px' }}>Notify users that this content has changed</label>
                     <br />
                 </div>
                 <div className="d-flex">

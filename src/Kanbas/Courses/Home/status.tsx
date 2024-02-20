@@ -29,13 +29,13 @@ function Status() {
             </ul>
             <div className="upcoming">
                 <span className="coming-up">Coming Up</span>
-                <span className="view-calendar"><FaCalendarAlt /><a href="#">View Calendar</a></span>
+                <span className="view-calendar"><FaCalendarAlt style={{ marginRight: '5px' }}/><a href="#">View Calendar</a></span>
             </div>
             <hr />
             <ul>
-                <li><FaCalendarAlt /><span><a href="#">Lecture </a><br />CS4550.12631.202410<br /> Sep 7 at 11:45am</span></li>
-                <li><FaCalendarAlt /><span><a href="#">Lecture </a><br />CS4550.12631.202410<br /> Sep 11 at 11:45am</span></li>
-                <li><FaCalendarAlt /><span><a href="#">Lecture </a><br />CS5610.06 SP23<br /> Sep 11 at 6pm</span></li>
+                <li><FaCalendarAlt style={{ marginRight: '5px' }}/><span><a href="#">Lecture </a><br />CS4550.12631.202410<br /> Sep 7 at 11:45am</span></li>
+                <li><FaCalendarAlt style={{ marginRight: '5px' }}/><span><a href="#">Lecture </a><br />CS4550.12631.202410<br /> Sep 11 at 11:45am</span></li>
+                <li><FaCalendarAlt style={{ marginRight: '5px' }}/><span><a href="#">Lecture </a><br />CS5610.06 SP23<br /> Sep 11 at 6pm</span></li>
 
             </ul>
 
