@@ -206,5 +206,205 @@
                 "module": "M108"
             }
         ]
+    },
+    {
+        "_id": "M109",
+        "name": "Advanced React Components",
+        "description": "Advanced concepts and techniques for React components.",
+        "course": "RS101",
+        "lessons": [
+            {
+                "_id": "L104",
+                "name": "React Hooks",
+                "description": "Understanding and using React hooks for stateful logic.",
+                "module": "M109"
+            },
+            {
+                "_id": "L105",
+                "name": "Context API",
+                "description": "Exploring the React Context API for managing global state.",
+                "module": "M109"
+            }
+        ]
+    },
+    {
+        "_id": "M110",
+        "name": "React Router",
+        "description": "Routing and navigation in React applications.",
+        "course": "RS101",
+        "lessons": [
+            {
+                "_id": "L106",
+                "name": "Basic Routing",
+                "description": "Setting up basic routing in React applications.",
+                "module": "M110"
+            },
+            {
+                "_id": "L107",
+                "name": "Nested Routes",
+                "description": "Using nested routes for more complex navigation structures.",
+                "module": "M110"
+            }
+        ]
+    },
+    {
+        "_id": "M111",
+        "name": "Advanced IOS Development",
+        "description": "Advanced concepts and techniques for IOS app development.",
+        "course": "RS102",
+        "lessons": [
+            {
+                "_id": "L104",
+                "name": "Advanced UIKit",
+                "description": "Advanced usage of UIKit for building rich user interfaces.",
+                "module": "M111"
+            },
+            {
+                "_id": "L105",
+                "name": "Concurrency in IOS",
+                "description": "Exploring concurrency models and techniques in IOS applications.",
+                "module": "M111"
+            }
+        ]
+    },
+    {
+        "_id": "M112",
+        "name": "Advanced Swift Programming",
+        "description": "Advanced concepts and techniques for Swift programming language.",
+        "course": "RS102",
+        "lessons": [
+            {
+                "_id": "L106",
+                "name": "Functional Programming in Swift",
+                "description": "Applying functional programming principles in Swift.",
+                "module": "M112"
+            },
+            {
+                "_id": "L107",
+                "name": "Advanced Memory Management",
+                "description": "Optimizing memory management and performance in Swift.",
+                "module": "M112"
+            }
+        ]
+    },
+    {
+        "_id": "M113",
+        "name": "Advanced Java Concepts",
+        "description": "Advanced concepts and techniques for Java programming language.",
+        "course": "RS103",
+        "lessons": [
+            {
+                "_id": "L104",
+                "name": "Concurrency in Java",
+                "description": "Understanding and managing concurrency in Java applications.",
+                "module": "M113"
+            },
+            {
+                "_id": "L105",
+                "name": "Java Collections Framework",
+                "description": "In-depth study of Java collections and their usage.",
+                "module": "M113"
+            }
+        ]
+    },
+    {
+        "_id": "M114",
+        "name": "Advanced SQL and Database Management",
+        "description": "Advanced SQL querying and database management techniques.",
+        "course": "RS104",
+        "lessons": [
+            {
+                "_id": "L104",
+                "name": "Advanced SQL Queries",
+                "description": "Writing complex SQL queries for data retrieval and manipulation.",
+                "module": "M114"
+            },
+            {
+                "_id": "L105",
+                "name": "Database Performance Optimization",
+                "description": "Optimizing database performance through indexing and query optimization.",
+                "module": "M114"
+            }
+        ]
+    },
+    {
+        "_id": "M115",
+        "name": "Cloud Security and Governance",
+        "description": "Security and governance considerations in cloud computing.",
+        "course": "RS105",
+        "lessons": [
+            {
+                "_id": "L104",
+                "name": "Cloud Security Best Practices",
+                "description": "Implementing security best practices in cloud environments.",
+                "module": "M115"
+            },
+            {
+                "_id": "L105",
+                "name": "Cloud Governance Frameworks",
+                "description": "Understanding governance frameworks for managing cloud resources.",
+                "module": "M115"
+            }
+        ]
+    },
+    {
+        "_id": "M116",
+        "name": "Advanced Algorithm Design",
+        "description": "Advanced algorithms and data structures.",
+        "course": "RS106",
+        "lessons": [
+            {
+                "_id": "L104",
+                "name": "Dynamic Programming",
+                "description": "Understanding and applying dynamic programming techniques.",
+                "module": "M116"
+            },
+            {
+                "_id": "L105",
+                "name": "Graph Algorithms",
+                "description": "Exploring algorithms for graph traversal and manipulation.",
+                "module": "M116"
+            }
+        ]
+    },
+    {
+        "_id": "M117",
+        "name": "Software Design Patterns",
+        "description": "In-depth study of software design patterns.",
+        "course": "RS107",
+        "lessons": [
+            {
+                "_id": "L104",
+                "name": "Creational Patterns",
+                "description": "Understanding creational design patterns such as Singleton and Factory.",
+                "module": "M117"
+            },
+            {
+                "_id": "L105",
+                "name": "Structural Patterns",
+                "description": "Exploring structural design patterns like Adapter and Decorator.",
+                "module": "M117"
+            }
+        ]
+    },
+    {
+        "_id": "M118",
+        "name": "Advanced Topics in Artificial Intelligence",
+        "description": "Advanced topics and applications in artificial intelligence.",
+        "course": "RS108",
+        "lessons": [
+            {
+                "_id": "L104",
+                "name": "Natural Language Processing",
+                "description": "Techniques for processing and understanding natural language.",
+                "module": "M118"
+            },
+            {
+                "_id": "L105",
+                "name": "Reinforcement Learning",
+                "description": "Introduction to reinforcement learning algorithms and applications.",
+                "module": "M118"
+            }
+        ]
     }
 ]

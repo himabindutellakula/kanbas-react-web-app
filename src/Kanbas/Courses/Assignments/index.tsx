@@ -33,7 +33,7 @@ function Assignments() {
                                 <FaEllipsisV className="me-2" />
                                 <FaPenSquare className="me-4" />
                                 <Link
-                                    to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} style={{ color: 'black' }}>{assignment.title}</Link>
+                                    to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} style={{ color: 'black' , textDecoration: 'none'}}>{assignment.title}</Link>
                                 <span className="float-end">
                                     <FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span>
                             </li>))}
