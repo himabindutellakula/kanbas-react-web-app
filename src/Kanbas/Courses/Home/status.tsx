@@ -15,17 +15,17 @@ function Status() {
         <div className=" wd-modules-container cust-subcol-right flex-grow-0 me-2 d-none d-lg-block wd-publish">
             <h5>Course Status</h5>
             <div>
-                <button type="button" className="unpublished"  style={{ marginRight: '5px' }}><AiOutlineStop />Unpublish</button>
-                <button type="button" className="published"><FaCheckCircle />Published</button>
+                <button type="button" className="btn btn-outline-secondary unpublished"  style={{ marginRight: '5px' }}><AiOutlineStop style={{ marginRight: '5px' }}/>Unpublish</button>
+                <button type="button" className="btn btn-success published"><FaCheckCircle style={{ marginRight: '5px' }}/>Published</button>
             </div>
             <ul>
-                <li><a href=""><button type="button"><CiImport />Import Existing Content</button></a></li>
-                <li><a href=""><button type="button"><AiOutlineCloudDownload />Import From Commons</button></a></li>
-                <li><a href=""><button type="button"><FaHome />Choose Home Page</button></a></li>
-                <li><a href=""><button type="button"><IoBarChartSharp />View Course Stream</button></a></li>
-                <li><a href=""><button type="button"><CiBullhorn />New Announcement</button></a></li>
-                <li><a href=""><button type="button"><IoBarChartSharp />New Analytics</button></a></li>
-                <li><a href=""><button type="button"><FaRegBell />View Course Notifications</button></a></li>
+                <li><a href=""><button type="button" className="btn btn-outline-secondary" style={{ marginTop: '2px' }}><CiImport style={{ marginRight: '5px' }}/>Import Existing Content</button></a></li>
+                <li><a href=""><button type="button" className="btn btn-outline-secondary" style={{ marginTop: '2px' }}><AiOutlineCloudDownload style={{ marginRight: '5px' }}/>Import From Commons</button></a></li>
+                <li><a href=""><button type="button" className="btn btn-outline-secondary" style={{ marginTop: '2px' }}><FaHome style={{ marginRight: '5px' }}/>Choose Home Page</button></a></li>
+                <li><a href=""><button type="button" className="btn btn-outline-secondary" style={{ marginTop: '2px' }}><IoBarChartSharp style={{ marginRight: '5px' }}/>View Course Stream</button></a></li>
+                <li><a href=""><button type="button" className="btn btn-outline-secondary" style={{ marginTop: '2px' }}><CiBullhorn style={{ marginRight: '5px' }}/>New Announcement</button></a></li>
+                <li><a href=""><button type="button" className="btn btn-outline-secondary" style={{ marginTop: '2px' }}><IoBarChartSharp style={{ marginRight: '5px' }}/>New Analytics</button></a></li>
+                <li><a href=""><button type="button" className="btn btn-outline-secondary" style={{ marginTop: '2px' }}><FaRegBell style={{ marginRight: '5px' }}/>View Course Notifications</button></a></li>
             </ul>
             <div className="upcoming">
                 <span className="coming-up">Coming Up</span>
