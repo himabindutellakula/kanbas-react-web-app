@@ -9,7 +9,7 @@ function Grades() {
     const es = enrollments.filter((enrollment) => enrollment.course === courseId);
 
     return (
-        <div>
+        <div className="container">
             <GradesButtons />
             <div className="table-responsive">
                 <table className="table table-striped table-bordered">

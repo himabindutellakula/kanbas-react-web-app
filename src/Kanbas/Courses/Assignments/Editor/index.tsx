@@ -16,7 +16,7 @@ function AssignmentEditor() {
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
     return (
-        <div>
+        <div className="container">
             <div className="wd-modules-buttons row justify-content-end">
                 <div className="col-auto">
                     <span className="tick">&#10003;</span>

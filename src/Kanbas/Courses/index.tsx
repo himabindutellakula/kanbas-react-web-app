@@ -16,7 +16,7 @@ function Courses() {
         <div>
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb" >
-                    <li className="breadcrumb-item"><Link to=""><HiMiniBars3 style={{color: 'red', marginRight: '5px'}}/>Course {course?.name}</Link></li>
+                    <li className="breadcrumb-item"><Link to=""><HiMiniBars3 style={{color: 'red', marginRight: '5px'}}/>{course?.number} {'-'} {course?.name}</Link></li>
                     <Routes>
                         <Route path="Home" element={<li className="breadcrumb-item active" aria-current="page"><Link to="">Home</Link></li>} />
                         <Route path="Modules" element={<li className="breadcrumb-item active" aria-current="page"><Link to="">Modules</Link></li>} />
