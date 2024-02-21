@@ -2,18 +2,24 @@
 import ModuleList from "./List";
 import "./index.css";
 import { FaEllipsisV } from "react-icons/fa";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 function Modules() {
     return (
         <div>
-            <div className="wd-modules-buttons">
-                <button className="btn btn-outline-secondary me-2">Collapse All</button>
-                <button className="btn btn-outline-secondary me-2">View Progress</button>
-                <select className="me-2" style={{ border: '1px solid black',height: '33px', borderRadius: '5px' }}>
-                    <option value="Publish All">Publish All</option>
-                    <option value="UnPublish All">Unpublish All</option>
-                </select>
-                <button className="btn btn-danger me-2" style={{ backgroundColor: '#B22222', color: 'white' }}>+ Module</button>
-                <button className="btn btn-outline-secondary"><FaEllipsisV /></button>
+            <div className="wd-modules-buttons row">
+                <button className="btn btn-outline-secondary me-2 col-auto">Collapse All</button>
+                <button className="btn btn-outline-secondary me-2 col-auto">View Progress</button>
+                <div className="dropdown col-auto" style={{ marginRight:'7px',height: '30px', borderRadius: '5px' }}>
+                    <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{ padding: '5px 10px', height: '35px', borderRadius: '4px'}}>
+                        Publish All
+                    </button>
+                    <ul className="dropdown-menu">
+                        <li><a className="dropdown-item" href="#">Publish All</a></li>
+                        <li><a className="dropdown-item" href="#">Unpublish All</a></li>
+                    </ul>
+                </div>
+                <button className="btn btn-danger me-2 col-auto" style={{ backgroundColor: '#B22222', color: 'white' }}>+ Module</button>
+                <button className="btn btn-outline-secondary col-auto"><FaEllipsisV /></button>
             </div>
             <hr style={{ border: '1px solid black' }} />
             <br />

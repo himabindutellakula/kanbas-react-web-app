@@ -34,9 +34,8 @@ function Assignments() {
                         {assignmentList.map((assignment) => (
                             <li className="list-group-item">
                                 <FaEllipsisV className="me-2" />
-                                <FaEdit className="me-4" />
                                 <Link
-                                    to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} style={{ color: 'black' , textDecoration: 'none'}}>{assignment.title}</Link>
+                                    to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} style={{ color: 'black' , textDecoration: 'none'}}><FaEdit className="me-4" />{assignment.title}</Link>
                                 <span className="float-end">
                                     <FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span><br/>
                                     <span style={{fontSize: 12}}><a style={{color:"red", marginLeft: '65px'}}>   {assignment.module}</a> | {assignment.due} | {assignment.points}</span>
