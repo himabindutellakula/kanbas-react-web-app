@@ -1,5 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { FaCheckCircle, FaEllipsisV, FaPlusCircle, FaPenSquare } from "react-icons/fa";
+import { FaCheckCircle, FaEllipsisV, FaPlusCircle, FaEdit, FaCaretDown } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import { assignments } from "../../Database";
 function Assignments() {
@@ -21,7 +22,9 @@ function Assignments() {
             <ul className="list-group wd-modules">
                 <li className="list-group-item">
                     <div>
-                        <FaEllipsisV className="me-2" /> ASSIGNMENTS
+                        <FaEllipsisV className="me-2" /> 
+                        <FaCaretDown className="me-2" />
+                        ASSIGNMENTS
                         <span className="float-end">
                             <FaCheckCircle className="text-success" />
                             <FaPlusCircle className="ms-2" /><FaEllipsisV className="ms-2" />
@@ -31,11 +34,12 @@ function Assignments() {
                         {assignmentList.map((assignment) => (
                             <li className="list-group-item">
                                 <FaEllipsisV className="me-2" />
-                                <FaPenSquare className="me-4" />
+                                <FaEdit className="me-4" />
                                 <Link
                                     to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} style={{ color: 'black' , textDecoration: 'none'}}>{assignment.title}</Link>
                                 <span className="float-end">
-                                    <FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span>
+                                    <FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span><br/>
+                                    <span style={{fontSize: 12}}><a style={{color:"red", marginLeft: '65px'}}>   {assignment.module}</a> | {assignment.due} | {assignment.points}</span>
                             </li>))}
                     </ul>
                 </li>
