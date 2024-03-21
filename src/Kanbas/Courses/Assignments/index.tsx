@@ -10,6 +10,13 @@ function Assignments() {
         state.assignmentReducer.assignments);
     const dispatch = useDispatch();
 
+    const handleDeleteAssignment = (assignmentId: string) => {
+        const confirmed = window.confirm("Do you want to delete?");
+        if (confirmed) {
+            dispatch(deleteAssignment(assignmentId));
+        }
+    };
+
     return (
         <>
             <div className="d-flex">
@@ -37,19 +44,19 @@ function Assignments() {
                     </div>
                     <ul className="list-group">
                         {assignmentList.filter((assignment) => assignment.course === courseId)
-                        .map((assignment, index) => 
-                        (
-                            <li key={index} className="list-group-item">
-                                <FaEllipsisV className="me-2" />
-                                <Link
-                                    to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} style={{ color: 'black', textDecoration: 'none' }}><FaEdit className="me-4"/>{assignment.title}</Link>
-                                <span className="float-end">
-                                    <button className="btn btn-danger me-2 rounded" style={{width:'55px'}}
-                                    onClick={() => dispatch(deleteAssignment(assignment._id))}
-                                    >Delete</button>
-                                    <FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span><br />
-                                <span style={{ fontSize: 12 }}><a style={{ color: "red", marginLeft: '65px' }}> Due: {assignment.dueDate}</a> | Available From: {assignment.availableFromDate} |  Available Until: {assignment.availableUntilDate} | {assignment.points} Pts</span>
-                            </li>))}
+                            .map((assignment, index) =>
+                            (
+                                <li key={index} className="list-group-item">
+                                    <FaEllipsisV className="me-2" />
+                                    <Link
+                                        to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`} style={{ color: 'black', textDecoration: 'none' }}><FaEdit className="me-4" />{assignment.title}</Link>
+                                    <span className="float-end">
+                                        <button className="btn btn-danger me-2 rounded" style={{ width: '55px' }}
+                                            onClick={() => handleDeleteAssignment(assignment._id)}
+                                        >Delete</button>
+                                        <FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span><br />
+                                    <span style={{ fontSize: 12 }}><a style={{ color: "red", marginLeft: '65px' }}> Due: {assignment.dueDate}</a> | Available From: {assignment.availableFromDate} |  Available Until: {assignment.availableUntilDate} | {assignment.points} Pts</span>
+                                </li>))}
                     </ul>
                 </li>
             </ul>
