@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./index.css";
-import { modules } from "../../Database";
 import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaCaretDown } from "react-icons/fa";
 import { useParams } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
@@ -9,8 +8,12 @@ import {
     deleteModule,
     updateModule,
     setModule,
+    setModules
 } from "./reducer";
 import { KanbasState } from "../../store";
+import { findModulesForCourse, createModule } from "./client";
+import * as client from "./client";
+
 function ModuleList() {
     const { courseId } = useParams();
     const moduleList = useSelector((state: KanbasState) =>
@@ -18,6 +21,32 @@ function ModuleList() {
     const module = useSelector((state: KanbasState) =>
         state.modulesReducer.module);
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        console.log(moduleList)
+        findModulesForCourse(courseId)
+            .then((modules) => {  console.log(modules);
+                dispatch(setModules(modules))}
+            );
+    }, [courseId]);
+
+    const handleAddModule = () => {
+        createModule(courseId, module).then((module) => {
+            dispatch(addModule(module));
+        });
+    };
+
+    const handleDeleteModule = (moduleId: string) => {
+        client.deleteModule(moduleId).then((status) => {
+            dispatch(deleteModule(moduleId));
+        });
+    };
+
+    const handleUpdateModule = async () => {
+        const status = await client.updateModule(module);
+        dispatch(updateModule(module));
+    };
+
 
     return (
         <>
@@ -40,17 +69,17 @@ function ModuleList() {
                             className="form-control rounded"
                         />
                     </div>
-                    <div className="d-flex justify-content-between" style={{ width: '30%', borderLeft: 'none'}}> 
-                        <button className="btn btn-success mb-2 rounded" style={{ width: '48%', height: '35%'}} onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+                    <div className="d-flex justify-content-between" style={{ width: '30%', borderLeft: 'none' }}>
+                        <button className="btn btn-success mb-2 rounded" style={{ width: '48%', height: '35%' }} onClick={() => handleAddModule()}>
                             Add
                         </button>
-                        <button className="btn btn-secondary rounded" style={{ width: '48%', height: '35%' }} onClick={() => dispatch(updateModule(module))}>
+                        <button className="btn btn-secondary rounded" style={{ width: '48%', height: '35%' }} onClick={() => handleUpdateModule()}>
                             Update
                         </button>
                     </div>
                 </li>
 
-                
+
                 {moduleList.filter((module) => module.course === courseId)
                     .map((module, index) => (
                         <li key={index}
@@ -61,7 +90,7 @@ function ModuleList() {
                                 {module.name}
                                 <span className="float-end">
                                     <button className="btn btn-danger me-2 rounded" style={{ width: '70px' }}
-                                        onClick={() => dispatch(deleteModule(module._id))}>
+                                        onClick={() => handleDeleteModule(module._id)}>
                                         Delete
                                     </button>
 
@@ -74,8 +103,8 @@ function ModuleList() {
                                     <FaPlusCircle className="ms-2" />
                                     <FaEllipsisV className="ms-2" />
                                 </span>
-                                <p style={{marginLeft: '47px'}}>{module.description}</p>
-                                <p style={{marginLeft: '47px'}}>{module._id}</p>
+                                <p style={{ marginLeft: '47px' }}>{module.description}</p>
+                                <p style={{ marginLeft: '47px' }}>{module._id}</p>
 
                             </div>
                         </li>
