@@ -2,29 +2,41 @@ import "./index.css";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { KanbasState } from "../../../store";
-import { addAssignment, setAssignment, updateAssignment } from "../assignmentReducer";
+import { addAssignment, setAssignment, updateAssignment } from "../assignmentsReducer";
 import { useEffect } from "react";
+import * as client from "../client";
 
 function AssignmentEditor() {
     const { assignmentId } = useParams();
 
     const assignmentList = useSelector((state: KanbasState) =>
-        state.assignmentReducer.assignments);
+        state.assignmentsReducer.assignments);
     const assignment = useSelector((state: KanbasState) =>
-        state.assignmentReducer.assignment);
-    const dispatch = useDispatch();
+        state.assignmentsReducer.assignment);
 
     const { courseId } = useParams();
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+
+    const handleAddAssignment = () => {
+        client.createAssignment(courseId, assignment).then((assignment) => {
+            dispatch(addAssignment(assignment));
+        });
+    };
+
+    const handleUpdateAssignment = async () => {
+        const status = await client.updateAssignment(assignment);
+        dispatch(updateAssignment(assignment));
+    };
 
     const handleSave = () => {
         if (assignmentId !== undefined) {
             if (!assignmentId.localeCompare("Editor")) {
-                dispatch(addAssignment({ ...assignment, course: courseId }));
-                console.log("In if line 25")
+                //dispatch(addAssignment({ ...assignment, course: courseId }));
+                handleAddAssignment()
             } else {
-                dispatch(updateAssignment(assignment));
-                console.log("In else line 28")
+                //dispatch(updateAssignment(assignment));
+                handleUpdateAssignment()
             }
         }
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
@@ -44,14 +56,20 @@ function AssignmentEditor() {
     return (
         <div className="container">
             <h3>Assignment Name</h3>
-            <input type="text" value={assignment.title}
+            <input type="text" value={assignment?.title}
                 className="form-control mb-2"
                 onChange={(e) =>
-                    dispatch(setAssignment({ ...assignment, title: e.target.value }))
+                    dispatch(
+                        setAssignment({
+                            ...assignment,
+                            title: e.target.value,
+                        })
+                    )
                 }
-            /> <br />
+            />
+            <br />
             <div className="form-group">
-                <textarea className="form-control" id="assignmentDescription" rows={3} value={assignment.description}
+                <textarea className="form-control" id="assignmentDescription" rows={3} value={assignment?.description}
                     onChange={(e) =>
                         dispatch(setAssignment({ ...assignment, description: e.target.value }))
                     }>
@@ -63,7 +81,7 @@ function AssignmentEditor() {
                     <label className="mx-3">Points</label>
                 </div>
                 <div className="col-md-8">
-                    <input type="number" className="form-control" value={assignment.points}
+                    <input type="number" className="form-control" value={assignment?.points}
                         onChange={(e) =>
                             dispatch(setAssignment({ ...assignment, points: e.target.value }))
                         } />
@@ -77,7 +95,7 @@ function AssignmentEditor() {
                 <div className="col-md-8">
                     <div className="border p-2">
                         <label><b>Due</b></label>
-                        <input className="form-control" type="date" value={assignment.dueDate}
+                        <input className="form-control" type="date" value={assignment?.dueDate}
                             onChange={(e) =>
                                 dispatch(setAssignment({ ...assignment, dueDate: e.target.value }))
                             } />
@@ -85,14 +103,14 @@ function AssignmentEditor() {
                         <div className="row">
                             <div className="col-md-6">
                                 <label><b>Available from</b></label>
-                                <input className="form-control w-30" type="date" value={assignment.availableFromDate}
+                                <input className="form-control w-30" type="date" value={assignment?.availableFromDate}
                                     onChange={(e) =>
                                         dispatch(setAssignment({ ...assignment, availableFromDate: e.target.value }))
                                     } />
                             </div>
                             <div className="col-md-6">
                                 <label><b>Until</b></label>
-                                <input className="form-control w-30" type="date" value={assignment.availableUntilDate}
+                                <input className="form-control w-30" type="date" value={assignment?.availableUntilDate}
                                     onChange={(e) =>
                                         dispatch(setAssignment({ ...assignment, availableUntilDate: e.target.value }))
                                     } />
@@ -117,3 +135,7 @@ function AssignmentEditor() {
     );
 }
 export default AssignmentEditor;
+
+function dispatch(arg0: { payload: any; type: "assignments/updateAssignment"; }) {
+    throw new Error("Function not implemented.");
+}

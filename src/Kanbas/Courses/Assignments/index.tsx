@@ -3,19 +3,28 @@ import { FaCheckCircle, FaEllipsisV, FaPlusCircle, FaEdit, FaCaretDown } from "r
 import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { KanbasState } from "../../store";
-import { deleteAssignment } from "./assignmentReducer";
+import { deleteAssignment, setAssignments } from "./assignmentsReducer";
+import * as client from "./client";
+import { useEffect } from "react";
 function Assignments() {
     const { courseId } = useParams();
     const assignmentList = useSelector((state: KanbasState) =>
-        state.assignmentReducer.assignments);
+        state.assignmentsReducer.assignments);
     const dispatch = useDispatch();
 
     const handleDeleteAssignment = (assignmentId: string) => {
-        const confirmed = window.confirm("Do you want to delete?");
-        if (confirmed) {
+        client.deleteAssignment(assignmentId).then((status) => {
             dispatch(deleteAssignment(assignmentId));
-        }
+        });
     };
+
+    useEffect(() => {
+        client.findAssignmentsForCourse(courseId)
+            .then((assignments) =>
+                dispatch(setAssignments(assignments))
+            );
+    }, [courseId]);
+
 
     return (
         <>
