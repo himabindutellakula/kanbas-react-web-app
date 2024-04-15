@@ -9,13 +9,6 @@ function WorkingWithObjects() {
     });
 
     const ASSIGNMENT_URL = `${API_BASE}/a5/assignment`;
-
-    const [module, setModule] = useState({
-        id: 1, title: "NodeJS Module",
-        description: "Creating a NodeJS server with ExpressJS",
-        due: "2021-10-10", completed: false, score: 0,
-    });
-    const MODULE_URL = `${API_BASE}/a5/module`;
     const fetchAssignment = async () => {
         const response = await axios.get(`${ASSIGNMENT_URL}`);
         setAssignment(response.data);
@@ -27,6 +20,7 @@ function WorkingWithObjects() {
     };
     useEffect(() => {
         fetchAssignment();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
