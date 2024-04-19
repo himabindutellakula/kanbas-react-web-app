@@ -1,0 +1,79 @@
+[
+    {
+        "_id": "A101",
+        "title": "React Component Quiz",
+        "course": "RS101",
+        "points": "100",
+        "description": "Quiz Description",
+        "dueDate": "2024-03-31",
+        "availableFromDate": "2024-03-18",
+        "availableUntilDate": "2024-03-31",
+        "published": false,
+        "quizType": "practiceQuiz",
+        "assignmentGroup": "quizzes",
+        "shuffleAnswers": false,
+        "timeLimit": "120",
+        "multipleAttempts": false,
+        "viewResponses": "Always",
+        "showCorrectAnswers": "immediately",
+        "oneQuestionAtATime": true,
+        "requireRespondousLockDownBrowser": false,
+        "requiredToViewQuizResults": false,
+        "webcamRequired": true,
+        "lockQuestionsAfterAnswering": true,
+        "quizFor": "Everyone",
+        "accessCode": "XYZ123",
+        "questions": [
+            {
+                "_id": "Q1",
+                "title":"",
+                "type": "fillInBlanks",
+                "question": "An overview of frontend development and its importance.",
+                "answer":""
+            },
+            {
+                "_id": "Q2",
+                "title":"",
+                "type": "mcq",
+                "question": "Basic concepts of React components and their usage.",
+                "option1": "",
+                "option2": "",
+                "option3": "",
+                "option4": "",
+                "answer": ""
+            },
+            {
+                "_id": "Q3",
+                "title":"",
+                "type": "TF",
+                "question": "An overview of frontend development and its importance.",
+                "answer":""
+            }
+        ]
+    },
+    {
+        "_id": "A102",
+        "title": "State Management Exercise Quiz",
+        "course": "RS101",
+        "points": "100",
+        "description": "Quiz Description",
+        "dueDate": "2024-03-31",
+        "availableFromDate": "2024-03-18",
+        "availableUntilDate": "2024-03-31",
+        "published": false,
+        "quizType": "gradedQuiz",
+        "assignmentGroup": "quizzes",
+        "shuffleAnswers": false,
+        "timeLimit": "30",
+        "multipleAttempts": false,
+        "viewResponses": "Always",
+        "showCorrectAnswers": "immediately",
+        "oneQuestionAtATime": true,
+        "requireRespondousLockDownBrowser": false,
+        "requiredToViewQuizResults": false,
+        "webcamRequired": false,
+        "lockQuestionsAfterAnswering": false,
+        "quizFor": "Everyone",
+        "accessCode": ""
+    }
+] 

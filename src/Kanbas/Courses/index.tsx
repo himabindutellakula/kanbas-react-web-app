@@ -8,6 +8,11 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
 import "./index.css";
+import Quizzes from "./Quizzes"
+import QuizViewer from "./Quizzes/Viewer";
+import QuizEditor from "./Quizzes/Editor";
+import QuestionEditor from "./Quizzes/Editor/questions";
+import QuestionAddition from "./Quizzes/Editor/questionAddition";
 
 function Courses({ courses }: { courses: any[]; }) {
     const { courseId } = useParams();
@@ -59,7 +64,11 @@ function Courses({ courses }: { courses: any[]; }) {
                         <Route path="Grades" element={<Grades />} />
                         <Route path="People" element={<h1>People</h1>} />
                         <Route path="ZoomMeetings" element={<h1>Zoom Meetings</h1>} />
-                        <Route path="Quizzes" element={<h1>Quizzes</h1>} />
+                        <Route path="Quizzes" element={<Quizzes />} />
+                        <Route path="Quizzes/:quizId" element={<QuizViewer />} />
+                        <Route path="Quizzes/:quizId/Editor" element={<QuizEditor />} />
+                        <Route path="Quizzes/:quizId/questions" element={<QuestionEditor />} />
+                        <Route path="Quizzes/:quizId/questions/questionAddition" element={<QuestionAddition />} />
                         <Route path="Panopto Video" element={<h1>Panopto Video</h1>} />
                         <Route path="Discussions" element={<h1>Discussions</h1>} />
                         <Route path="Announcements" element={<h1>Announcements</h1>} />
